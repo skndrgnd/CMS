@@ -1,0 +1,117 @@
+<?php include "header.php"; ?>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+
+<div class="reg">
+    <div class="container2">
+        <header>STUDENT REGISTRATION</header>
+        <form action="#">
+            <div class="form first">
+
+                <div class="details person">
+                    <span class="title">Personal Details</span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="Enter your name" require="">
+                        </div>
+
+
+
+                        <div class="input-field">
+                            <label>Date of birth</label>
+                            <input type="date" placeholder="Enter birth date" require="">
+                        </div>
+                        <div class="input-field">
+                            <label>Email</label>
+                            <input type="text" placeholder="Enter youremail" require="">
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>mobile Number</label>
+                            <input type="number" placeholder="Enter your number" require="">
+                        </div>
+                        <div class="input-field">
+                            <label>Gender</label>
+                            <input type="text" placeholder="Enter birth gender" require="">
+                        </div>
+                        <div class="input-field">
+                            <label>Occuption</label>
+                            <input type="text" placeholder="Enter your occuption" require="">
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="details person">
+                    <span class="title">Institution Information
+                    </span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Institution Name :-</label>
+                            <input type="text" placeholder="Enterinstitution name" require="">
+                        </div>
+
+
+
+                        <div class="input-field">
+                            <label>Institution Address:-</label>
+                            <input type="text" placeholder=" " require="">
+                        </div>
+                        <div class="input-field">
+                            <label>Courses</label>
+                            <!-- <input type="text" placeholder="Enter youremail" require=""> -->
+                            <select type="text" name="course" id="form3Example99" class="form-control form-control-lg">
+                                <option>--select courses--</option>
+                                <option>Foundation Courses (3,2 &1 Year)</option>
+                                <option>SIP (School Integrated Program)</option>
+                                <option>AADHAR BATCH (9th to 12th )</option>
+                                <option>ESSENTIAL BATCH (6th to 8th)</option>
+                                <option>MENTORSHIP PROGRAM</option>
+                                <option>Current Affairs for UPSC & State PCS</option>
+                                <option>Distance Learning Program (DLP)</option>
+                                <option>CSAT</option>
+                                <option>ANSWER WRITING PROGRAM</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>mode </label>
+                            <!-- <input type="number" placeholder="Enter your number" require=""> -->
+
+                            <select type="text" id="form3Example99" class="form-control form-control-lg">
+                                <option>--select--</option>
+                                <option>Offline</option>
+                                <option>Online</option>
+                                <option>Recorded</option>
+
+                            </select>
+
+                        </div>
+                        <div class="input-field">
+                            <label>Medium</label>
+                            <!-- <input type="text" placeholder="Enter birth gender" require=""> -->
+                            <select type="text" name="medium" id="form3Example99" class="form-control form-control-lg">
+                                <option>--select medium--</option>
+                                <option>English</option>
+                                <option>Hindi</option>
+                            </select>
+                        </div>
+                        <div class="input-field">
+                            <label>State</label>
+                            <input type="text" placeholder="Enter your state" require="">
+                        </div>
+                    </div>
+                    <textarea name="message" placeholder="Message"></textarea><br><br>
+                    <button type="submit" class="btn btn-primary">Submit Now</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!--  -->
+<?php include "footer.php"; ?>

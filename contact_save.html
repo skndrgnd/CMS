@@ -1,0 +1,26 @@
+<?php
+include("admin/include/dbconn.php");
+if (isset($_POST['sbtn'])) {
+    print_r($_POST);
+    $name = $_POST['name'];
+    $phone = $_POST['phone']; // Corrected variable name from 'phonet' to 'phone'
+    $email = $_POST['email'];
+    $state = $_POST['state'];
+    $city = $_POST['city'];
+    $courses = $_POST['courses'];
+    $mode = $_POST['mode'];
+    $message = $_POST['message'];
+
+    // Fixed the SQL query by correcting the variable names and adding the missing single quote
+    $sql = "INSERT INTO tbl_enquiry (name,phone,email,state,city,courses,mode,message) VALUES ('$name', '$phone', '$email', '$state', '$city','$courses',  '$mode', '$message')";
+
+    $query = mysqli_query($conn, $sql);
+
+    if ($query == true) {
+        session_start();
+        $_SESSION['contactmsg'] = 1;
+        header('Location: contact.php');
+    } else {
+        echo "Error" . $conn->error;
+    }
+}

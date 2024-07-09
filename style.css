@@ -1,0 +1,601 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+
+
+}
+
+body {
+    /* background-color: rgb(222, 220, 220); */
+    background-color: rgb(235, 229, 229);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    height: 50px;
+
+    position: sticky;
+    /* background-color: rebeccapurple; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin-top: 15px;
+    font-weight: 700;
+    padding: 0px 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    margin-top: 20px;
+
+    font-size: 19px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: "";
+    width: 0%;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* nav end */
+
+/* icon */
+.in i {
+    margin-left: 160px;
+    color: rgb(10, 140, 191);
+    margin-top: 90px;
+    font-size: 60px;
+    align-items: center;
+
+}
+
+/* h3 */
+.a {
+    text-align: center;
+    font-family: 'Trebuchet MS',
+        sans-serif;
+    margin: 20px auto;
+    margin-right: 40px;
+    transition: all 0.5s ease;
+}
+
+h3:hover.a {
+    color: rgb(21, 172, 232);
+}
+
+/* p */
+.p1 {
+    margin-right: 50px;
+    text-align: center;
+}
+
+/* button */
+.btm {
+    color: black;
+    padding: 8px 22px;
+    width: 24%;
+    border-radius: 30px;
+    margin-left: 20px;
+    border: #ff004f;
+    background-color: rgb(19, 171, 231);
+    transition: all 0.3s ease;
+
+}
+
+.btm:hover {
+    background-color: rgb(46, 4, 66);
+    color: aliceblue;
+}
+
+
+
+
+/*  */
+/* about img hover */
+
+
+
+/* how its work */
+#services {
+    padding: 30px 0px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+
+}
+
+.services-list div {
+    background: rgb(7, 105, 144);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.services-list i {
+    color: #3c0877;
+    margin-top: -30px;
+}
+
+.services-list div h2 {
+    font-size: 30px;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.services-list div p {
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+
+.services-list div:hover {
+    background: #7ac3f0dd;
+    transform: translate(-10px);
+}
+
+/* why choose us  i1img*/
+
+/* i2 img */
+.i2 {
+    /* border: 2px solid black; */
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.i2 img {
+    width: 100%;
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+
+    /* top:-100px 
+    left:0;*/
+    color: aliceblue;
+    box-sizing: border-box;
+    left: 0;
+    height: 100%;
+    padding: 20px;
+    width: 100%;
+    top: -100%;
+
+    /* left: -100%; */
+    transition: all 0.4s;
+}
+
+.i2:hover .content {
+    /* left: 0; */
+    top: 0;
+}
+
+
+
+
+/* counter code */
+.counter-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* padding: 10rem 9%; */
+    margin-top: 3rem;
+    /* margin-left: 6px; */
+    background-color: aliceblue;
+    border-radius: 5px;
+    position: relative;
+}
+
+.counter-wrapper::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.counter {
+    text-align: center;
+    color: rgb(6, 160, 220);
+    margin-left: 10px;
+}
+
+.counter::before {
+    position: absolute;
+    content: "";
+    /* bottom: 0.2rem; */
+    left: 50%;
+    width: 20%;
+    height: 0.2rem;
+    /* background: #ff004f; */
+    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    -o-transform: translate(-50%);
+}
+
+.counter .count {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+
+}
+
+.counter p {
+    font-size: 1.4rem;
+    font-family: 'poppins', sans-serif;
+    color: black;
+    font-weight: 600;
+}
+
+/* about.php */
+
+
+
+/* registr.php */
+.reg {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url(images/sl1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+
+.container2 {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    flex-wrap: wrap;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 30px;
+    margin: 0 15px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rbga(0, 0, 0, 0.2);
+}
+
+.container2 header {
+    font-size: 20px;
+    position: relative;
+    font-weight: 600;
+    color: #333;
+}
+
+.container2 header::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    height: 3px;
+    left: 0;
+
+    width: 27px;
+    background-color: skyblue;
+}
+
+
+
+.container2 form {
+    position: relative;
+    /* min-height: 290px; */
+    background-color: #fff;
+    margin-top: 16px;
+}
+
+.container2 form.details {
+    margin-top: 30px;
+}
+
+.container2 form .title {
+    font-size: 16px;
+    display: block;
+    font-weight: 500;
+    margin: 6px 0;
+    color: #333;
+}
+
+.container2 form .fields {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form .fields .input-field {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 3 - 15px);
+    margin: 4px 0;
+}
+
+.input-field label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+
+.input-field input {
+    height: 42px;
+    outline: none;
+    border: 1px solid #2e2e2e;
+    padding: 0px 1px;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 5px;
+    margin: 8px 0;
+}
+
+.input-field input:is(:focus, vaild) {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+}
+
+.input-field input[type="date"] {
+    color: #333;
+}
+
+textarea {
+    min-height: 100px;
+    width: 100%;
+
+}
+
+/* contact.php */
+.cont {
+    min-height: 100vh;
+    display: flex;
+    background-color: rgb(163, 220, 243);
+    align-items: center;
+    justify-content: center;
+
+}
+
+.cont2 {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    flex-wrap: wrap;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 30px;
+    margin: 0 15px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rbga(0, 0, 0, 0.2);
+}
+
+.cont2 form .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form .info .in-info {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 2 - 15px);
+    margin: 4px 0;
+}
+
+textarea {
+    min-height: 100px;
+    width: 100%;
+
+}
+
+/* login .php*/
+.login {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+.logo {
+    margin-left: 60px;
+    align-items: center;
+    /* background-color: red; */
+}
+
+.log {
+    width: 520px;
+
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: black;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.log h1 {
+    font-size: 36px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(4, 83, 114);
+}
+
+.log .input-box {
+    width: 100%;
+    height: 50px;
+    /* background: red; */
+    margin: 30px 0;
+    position: relative;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: skyblue;
+    padding: 20px 45px 20px 20px;
+}
+
+
+.input-box i {
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.log .remember-forget {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+
+.remember-forget a {
+    color: rgb(4, 138, 192);
+    text-decoration: none;
+
+}
+
+.remember-forget a:hover {
+    text-decoration: underline;
+
+}
+
+.log .btn {
+    width: 60%;
+    height: 45px;
+    background-color: rgb(4, 74, 102);
+    border: none;
+    margin-left: 80px;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.log .btn:hover {
+    background-color: skyblue;
+    color: black;
+    border: 2px solid black;
+}
+
+.log .register-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+
+}
+
+.input-box input {
+    border: 1px solid black;
+    height: 10px;
+    width: 90%;
+}
+
+.register-link p a {
+    color: rgb(4, 74, 102);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+
+}
+
+/* course.php */
+/* .rating i {
+    font-size: 25px;
+    color: yellow;
+}
+
+.list-wrap i {
+    color: rgb(9, 159, 219);
+}
+
+.cou i {
+    color: rgb(10, 140, 191);
+
+}
+
+.cou2 i {
+    font-size: 50px;
+    margin-left: 200px;
+    margin-top: 40px;
+
+    color: #041734;
+} */
+
+/* about.php */
+/* .btmm {
+    color: black;
+    padding: 8px 22px;
+    width: 80%;
+    border-radius: 30px;
+
+    margin-left: 50px;
+    border: #ff004f;
+    background-color: rgb(19, 171, 231);
+    transition: all 0.3s ease;
+
+}
+
+.btmm:hover {
+    background-color: rgb(46, 4, 66);
+    color: aliceblue;
+} */

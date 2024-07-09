@@ -1,0 +1,176 @@
+<?php session_start();
+include "header.php"; ?>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+<div class="box">
+    <img src="images/contact.svg" alt="" srcset="" width="100%">
+    <div class="container-fluid">
+        <div class="row" style="margin-top: 120px;">
+            <div class="col-lg-5" style="width:30%;margin-left:50px">
+
+                <h2 style="font-size:30px; font-weight:700; color: rgb(4, 80, 110);">Let's Create Future</h2>
+                <p style="margin-top:30px;font-weight:500;">Willz IAS Academy isn’t just one of the best Civil<br>
+                    Services coaching institutes in town.</p>
+
+                <h5 style="color: rgb(4, 80, 110);">Delhi Branch:</h5>
+                <p> 511, DDA Tower-1, District Centre,
+                    Janakpuri, Delhi-1 10058.
+                </p>
+
+                <h5 style="color: rgb(4, 80, 110);">Rohtak Branch:</h5>
+                <p>140/29, 1st Floor, Vasant Vihar, Sonipat Road,
+                    Rohtak-124001.</p>
+
+                <h5 style="color: rgb(4, 80, 110);">Jind Office:</h5>
+                <p>1st Floor, Commander Complex, Jind - Gohana Road, Near Employees Dharmshala,
+                    Jind, Haryana - 126102.</p>
+
+                <strong>+91 90508 88508<br>
+                    +91 9050756507</strong>
+                <br>
+                <br>
+
+                <strong>
+                    <h5 style=" color: rgb(4, 80, 110);">Email:</h5>vermasneha9555@gmail.com
+                </strong>
+                <!-- <strong>
+                    <h5 style="margin-top:0px;">
+                        <i class="fa fa-map-marker" style="font-size:20px;color:red"></i>
+                        Delhi Branch:
+                    </h5>
+                </strong>
+                <p>511, DDA Tower-1, District Centre, <br> Janakpuri, Delhi-1 10058.</p>
+
+                <strong>
+                    <h5>
+                        <i class="fa fa-map-marker" style="font-size:20px;color:red"></i>
+                        Rohtak Branch:
+                    </h5>
+                </strong>
+                <p>1140/29, 1st Floor, Vasant Vihar, Sonipat Road,<br>
+                    Rohtak-124001.</p> -->
+
+
+                <!-- <strong>
+                    <h5>
+                        <i class="fa fa-map-marker" style="font-size:20px;color:red"></i>
+                        Jind Office:
+                    </h5>
+               
+                <p>1st Floor, Commander Complex, Jind - Gohana Road,<br> Near Employees Dharmshala,
+                    Jind, Haryana<br> - 126102.</p>
+                 </strong>
+                -->
+
+
+                <!-- <p>
+                    <i class="fa fa-phone" style="font-size:24px;color:blue;"></i>
+                    +91 9555096916<br><i class="fa fa-whatsapp" style="font-size:24px;color:green"></i>
+                    +91 9670389000
+
+
+                </p> -->
+
+            </div>
+            <div class="col-lg-7" style="margin-left: 30px;">
+                <div class="cont">
+                    <div class="cont2">
+                        <?php
+
+                        if (isset($_SESSION['contactmsg']) == 1) { ?>
+                            <div class="alert alert-success">Enquiry Submitted Successfully..</div>
+                        <?php unset($_SESSION['contactmsg']);
+                        }  ?>
+
+
+
+                        <h2 style="font-size:30px; font-weight:700;">Let's Create Future</h2>
+
+                        <form action="contact_save.php" method="post">
+                            <div class="info">
+                                <div class="in-info">
+                                    <label>Full Name</label>
+                                    <input type="text" name="name" placeholder="Enter your name" require="">
+                                </div>
+
+                                <div class="in-info">
+                                    <label>phone</label>
+                                    <input type="number" name="phone" placeholder="Enter your number" require="">
+                                </div>
+
+
+                            </div>
+                            <div class="info">
+                                <div class="in-info" style="width: 100%;">
+                                    <label>Email</label>
+                                    <input type="email" name="email" placeholder="Enter your emai" require="">
+                                </div>
+                            </div>
+
+
+                            <div class="info">
+                                <div class="in-info">
+                                    <label>State</label>
+                                    <input type="text" name="state" placeholder="Enter your state" require="">
+                                </div>
+
+                                <div class="in-info">
+                                    <label>City</label>
+                                    <input type="text" name="city" placeholder="Enter your city" require="">
+                                </div>
+                            </div>
+
+                            <!--  -->
+
+                            <div class="info">
+                                <div class="in-info">
+                                    <label>courses</label>
+                                    <select type="text" name="courses" id="form3" class="form-control form-control-lg" required>
+                                        <option value="">--select Courses--</option>
+                                        <option value="Foundation Courses (3,2 &1 Year)">Foundation Courses (3,2 &1
+                                            Year)</option>
+                                        <option value="SIP (School Integrated Program)">SIP (School Integrated Program)
+                                        </option>
+                                        <option value="AADHAR BATCH (9th to 12th )">AADHAR BATCH (9th to 12th )</option>
+                                        <option value="ESSENTIAL BATCH (6th to 8th)">ESSENTIAL BATCH (6th to 8th)
+                                        </option>
+                                        <option value="MENTORSHIP PROGRAM">MENTORSHIP PROGRAM</option>
+                                        <option value="Current Affairs for UPSC & State PCS">Current Affairs for UPSC &
+                                            State PCS</option>
+                                        <option value="Distance Learning Program (DLP)">Distance Learning Program (DLP)
+                                        </option>
+                                        <option value="CSAT">CSAT</option>
+                                        <option value="ANSWER WRITING PROGRAM">ANSWER WRITING PROGRAM</option>
+
+                                    </select>
+                                </div>
+
+                                <div class="in-info">
+                                    <label>Mode</label>
+                                    <select type="text" id="form3" name="mode" class="form-control form-control-lg" required>
+                                        <option value="">--select--</option>
+                                        <option value="Offline">Offline</option>
+                                        <option value="Online">Online</option>
+                                        <option value="Recorded">Recorded</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                            <br>
+
+                            <textarea name="message" placeholder="Message"></textarea><br>
+                            <br>
+                            <input type="submit" name="sbtn" class="btn btn-primary" value="Send Message" />
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row" style="margin-top:50px">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113996.47088491148!2d83.32150844129507!3d26.763844606641012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3991446a0c332489%3A0x1ff3f97fdcc6bfa2!2sGorakhpur%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1697142149728!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <?php include "footer.php"; ?>
